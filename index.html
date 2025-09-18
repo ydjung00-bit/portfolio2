@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 정영대 - AI/임베디드 개발자 포트폴리오</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            color: #1f2937;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header Section -->
+    <header class="bg-white shadow-sm p-4 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-gray-900">정영대 포트폴리오</h1>
+            <nav>
+                <ul class="flex space-x-4 text-gray-600 font-medium">
+                    <li><a href="#about" class="hover:text-gray-900 transition-colors duration-200">소개</a></li>
+                    <li><a href="#projects" class="hover:text-gray-900 transition-colors duration-200">프로젝트</a></li>
+                    <li><a href="#skills" class="hover:text-gray-900 transition-colors duration-200">기술 스택</a></li>
+                    <li><a href="#contact" class="hover:text-gray-900 transition-colors duration-200">연락처</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-6 space-y-12 md:space-y-24">
+
+        <!-- About Me Section -->
+        <section id="about" class="bg-white rounded-xl shadow-lg p-8 md:p-12 text-center md:text-left">
+            <div class="flex flex-col md:flex-row items-center justify-center md:justify-start gap-8">
+                <!-- Profile Image -->
+                <div class="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-gray-200 shadow-md">
+                    <img src="https://placehold.co/400x400/2563EB/ffffff?text=AI" alt="프로필 사진" class="w-full h-full object-cover">
+                </div>
+                <!-- Profile Text -->
+                <div class="flex-1">
+                    <h2 class="text-4xl font-extrabold text-gray-900 mb-2">안녕하세요, 정영대입니다!</h2>
+                    <p class="text-2xl text-gray-700 font-medium mb-4">AI 및 임베디드 시스템 개발자입니다.</p>
+                    <p class="text-gray-600 leading-relaxed max-w-2xl mx-auto md:mx-0">
+                        저는 인공지능과 임베디드 시스템의 융합을 통해 혁신적인 솔루션을 만드는 데 열정을 가지고 있습니다. 엣지 디바이스에서 효율적으로 동작하는 AI 모델을 개발하고, 하드웨어와 소프트웨어를 아우르는 깊이 있는 지식으로 복잡한 문제를 해결합니다. 다양한 프로젝트 경험을 통해 습득한 전문성을 바탕으로 최고의 결과물을 만들어내겠습니다.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="space-y-8">
+            <h2 class="text-3xl font-bold text-gray-900 text-center">주요 프로젝트</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Project Card 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform transform hover:scale-105 duration-300">
+                    <img src="https://placehold.co/600x400/3B82F6/ffffff?text=Project+1" alt="프로젝트 이미지 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">스마트 팩토리 비전 시스템</h3>
+                        <p class="text-gray-600 mb-4">
+                            불량품을 실시간으로 감지하는 AI 기반 비전 시스템을 임베디드 보드에 포팅했습니다. TensorFlow Lite를 사용하여 모델을 최적화하고, C++로 고속 추론 파이프라인을 구축했습니다.
+                        </p>
+                        <a href="#" class="text-blue-600 hover:text-blue-800 font-bold transition-colors duration-200">더 알아보기 &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform transform hover:scale-105 duration-300">
+                    <img src="https://placehold.co/600x400/8B5CF6/ffffff?text=Project+2" alt="프로젝트 이미지 2" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">자율주행 드론 제어 시스템</h3>
+                        <p class="text-gray-600 mb-4">
+                            SLAM 알고리즘과 딥러닝 기반 객체 인식을 결합하여 장애물을 회피하며 자율 비행하는 드론을 개발했습니다. ROS와 Jetson Nano를 활용하여 통합 시스템을 구축했습니다.
+                        </p>
+                        <a href="#" class="text-blue-600 hover:text-blue-800 font-bold transition-colors duration-200">더 알아보기 &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform transform hover:scale-105 duration-300">
+                    <img src="https://placehold.co/600x400/EC4899/ffffff?text=Project+3" alt="프로젝트 이미지 3" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">음성 기반 스마트 홈 허브</h3>
+                        <p class="text-gray-600 mb-4">
+                            사용자의 음성 명령을 인식하고 기기를 제어하는 임베디드 시스템을 개발했습니다. 경량화된 음성 인식 모델을 마이크로컨트롤러에 탑재하여 저전력으로 동작하게 만들었습니다.
+                        </p>
+                        <a href="#" class="text-blue-600 hover:text-blue-800 font-bold transition-colors duration-200">더 알아보기 &rarr;</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="space-y-8">
+            <h2 class="text-3xl font-bold text-gray-900 text-center">기술 스택</h2>
+            <div class="bg-white rounded-xl shadow-lg p-8 md:p-12">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- AI Skills -->
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">AI / 머신러닝</h3>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-center gap-2"><span class="text-blue-500 text-lg">&bull;</span>PyTorch, TensorFlow</li>
+                            <li class="flex items-center gap-2"><span class="text-blue-500 text-lg">&bull;</span>Scikit-learn, OpenCV</li>
+                            <li class="flex items-center gap-2"><span class="text-blue-500 text-lg">&bull;</span>모델 경량화 (TensorFlow Lite, ONNX)</li>
+                            <li class="flex items-center gap-2"><span class="text-blue-500 text-lg">&bull;</span>자연어 처리 (NLP), 컴퓨터 비전 (CV)</li>
+                        </ul>
+                    </div>
+                    <!-- Embedded Skills -->
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">임베디드 시스템</h3>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-center gap-2"><span class="text-blue-500 text-lg">&bull;</span>C, C++, Python</li>
+                            <li class="flex items-center gap-2"><span class="text-blue-500 text-lg">&bull;</span>RTOS (FreeRTOS), Linux</li>
+                            <li class="flex items-center gap-2"><span class="text-blue-500 text-lg">&bull;</span>ARM, RISC-V 아키텍처</li>
+                            <li class="flex items-center gap-2"><span class="text-blue-500 text-lg">&bull;</span>Raspberry Pi, Jetson Nano, Arduino</li>
+                        </ul>
+                    </div>
+                    <!-- Other Skills -->
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">기타</h3>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-center gap-2"><span class="text-blue-500 text-lg">&bull;</span>Git, GitHub</li>
+                            <li class="flex items-center gap-2"><span class="text-blue-500 text-lg">&bull;</span>Docker</li>
+                            <li class="flex items-center gap-2"><span class="text-blue-500 text-lg">&bull;</span>ROS (Robot Operating System)</li>
+                            <li class="flex items-center gap-2"><span class="text-blue-500 text-lg">&bull;</span>웹 개발 (HTML, CSS)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="space-y-8">
+            <h2 class="text-3xl font-bold text-gray-900 text-center">연락처</h2>
+            <div class="bg-white rounded-xl shadow-lg p-8 md:p-12 text-center">
+                <p class="text-gray-600 mb-6">
+                    저와 함께 일하고 싶으시거나 프로젝트에 대해 논의하고 싶으시면 언제든지 연락 주세요!
+                </p>
+                <div class="flex flex-col md:flex-row justify-center items-center gap-4">
+                    <a href="mailto:your-email@example.com" class="bg-blue-600 text-white font-bold py-3 px-6 rounded-full hover:bg-blue-700 transition-colors duration-200 shadow-md">
+                        이메일 보내기
+                    </a>
+                    <a href="https://github.com/your-github" target="_blank" class="bg-gray-800 text-white font-bold py-3 px-6 rounded-full hover:bg-gray-900 transition-colors duration-200 shadow-md">
+                        GitHub 방문하기
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white p-4 text-center mt-12">
+        <div class="container mx-auto">
+            <p>&copy; 2024 AI & Embedded Developer. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
