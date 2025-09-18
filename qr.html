@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실시간 QR 코드 생성기</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+        }
+        h1 {
+            color: #1c1e21;
+            margin-bottom: 20px;
+        }
+        #text-input {
+            width: calc(100% - 20px);
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #dddfe2;
+            border-radius: 6px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        #qrcode {
+            width: 256px;
+            height: 256px;
+            margin: 0 auto;
+            border: 1px solid #dddfe2;
+            padding: 10px;
+            border-radius: 6px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #qrcode img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>QR 코드 생성기 🪄</h1>
+        <p>아래 입력창에 텍스트나 URL을 입력하세요.</p>
+        <input type="text" id="text-input" placeholder="여기에 입력하세요...">
+        <div id="qrcode"></div>
+    </div>
+
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+
+    <script>
+        const qrCodeContainer = document.getElementById('qrcode');
+        const textInput = document.getElementById('text-input');
+
+        // QRCode 객체 생성
+        const qrcode = new QRCode(qrCodeContainer, {
+            width: 256,
+            height: 256,
+            colorDark: "#000000",
+            colorLight: "#ffffff",
+            correctLevel: QRCode.CorrectLevel.H
+        });
+
+        // 초기 QR 코드 생성 함수
+        function makeCode(text) {
+            if (!text) {
+                // 입력값이 없을 경우, 안내 문구 표시
+                qrCodeContainer.innerHTML = 'QR 코드가 여기에 표시됩니다.';
+                return;
+            }
+            qrcode.makeCode(text);
+        }
+
+        // 페이지 로드 시 초기 안내 문구 표시
+        makeCode(""); 
+
+        // 입력 필드에 텍스트를 입력할 때마다 QR 코드 실시간 생성
+        textInput.addEventListener('input', function () {
+            makeCode(this.value);
+        });
+    </script>
+
+</body>
+</html>
